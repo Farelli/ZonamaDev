@@ -1018,7 +1018,7 @@ server_latest()
 	# Check for existence of deprecated PublicEngine folder; remove if it exists
 	# Also clean up broken symlinks
 	cd "${WORKSPACE}"
-	if [ -d PublicEngine]; then
+	if [ -d PublicEngine ]; then
 		rm -fr PublicEngine Core3/MMOEngine
 	fi
 
