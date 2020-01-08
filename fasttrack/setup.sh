@@ -109,8 +109,9 @@ calc_cores() {
     local est_ram=0
 
     if [ $total_cores -lt 4 ]; then
-	echo "*** ZONAMADEV REQUIRES A MINIMUM OF 4 CPU CORES ON THE HOST! EXITING! ***"
-	return 0
+      echo "*** ZONAMADEV REQUIRES A MINIMUM OF 4 CPU CORES ON THE HOST! EXITING! ***"
+      return 0
+    fi
 
     let "byram=($total_ram / 1024 / 1024 / 4 * 3) / 768"
     let "bycore=$total_cores / 4 * 3"
